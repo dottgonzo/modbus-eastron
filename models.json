@@ -1,0 +1,140 @@
+[
+    {
+        "label": "SDM120CT",
+        "registers": [
+            {
+                "label": "voltage",
+                "reg": 0
+            },
+            {
+                "label": "current",
+                "reg": 6
+            },
+            {
+                "label": "power",
+                "reg": 12
+            },
+            {
+                "label": "power",
+                "reg": 20,
+                "group": "active"
+            },
+            {
+                "label": "power",
+                "reg": 24,
+                "group": "reactive"
+            },
+            {
+                "label": "factor",
+                "reg": 30
+            },
+            {
+                "label": "phaseAngle",
+                "reg": 36
+            },
+            {
+                "label": "hz",
+                "reg": 70
+            },
+            {
+                "label": "import",
+                "reg": 72,
+                "group": "active"
+            },
+            {
+                "label": "export",
+                "reg": 74,
+                "group": "active"
+            },
+            {
+                "label": "total",
+                "reg": 342,
+                "group": "active"
+            },
+            {
+                "label": "import",
+                "reg": 76,
+                "group": "reactive"
+            },
+            {
+                "label": "export",
+                "reg": 78,
+                "group": "reactive"
+            },
+            {
+                "label": "total",
+                "reg": 344,
+                "group": "reactive"
+            }
+        ]
+    },
+    {
+        "label": "SDM220",
+        "registers": [
+            {
+                "label": "voltage",
+                "reg": 0
+            },
+            {
+                "label": "current",
+                "reg": 6
+            },
+            {
+                "label": "power",
+                "reg": 12
+            },
+            {
+                "label": "power",
+                "reg": 20,
+                "group": "active"
+            },
+            {
+                "label": "power",
+                "reg": 24,
+                "group": "reactive"
+            },
+            {
+                "label": "factor",
+                "reg": 30
+            },
+            {
+                "label": "phaseAngle",
+                "reg": 36
+            },
+            {
+                "label": "hz",
+                "reg": 70
+            },
+            {
+                "label": "import",
+                "reg": 72,
+                "group": "active"
+            },
+            {
+                "label": "export",
+                "reg": 74,
+                "group": "active"
+            },
+            {
+                "label": "total",
+                "reg": 342,
+                "group": "active"
+            },
+            {
+                "label": "import",
+                "reg": 76,
+                "group": "reactive"
+            },
+            {
+                "label": "export",
+                "reg": 78,
+                "group": "reactive"
+            },
+            {
+                "label": "total",
+                "reg": 344,
+                "group": "reactive"
+            }
+        ]
+    }
+]
