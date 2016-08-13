@@ -40,9 +40,10 @@ interface EastronDevice {
 export default (o: EastronDevice) => {
     return new Promise((resolve, reject) => {
 
-        let answer:any={};
+        let answer: any = {};
 
         let registers: IRegister[];
+
 
         function availablemodels(): string[] {
             let models: string[] = [];
@@ -65,7 +66,7 @@ export default (o: EastronDevice) => {
                 async.eachSeries(registers, (regi, cb) => {
 
                     Client.readInputRegisters(regi.reg, 2, (err, data) => {
-console.log(data)
+                        console.log(data)
                         if (err) {
                             cb(err)
                         } else {
