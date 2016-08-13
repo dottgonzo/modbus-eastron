@@ -66,7 +66,6 @@ export default (o: EastronDevice) => {
                 async.eachSeries(registers, (regi, cb) => {
 
                     Client.readInputRegisters(regi.reg, 2, (err, data) => {
-                        console.log(data)
                         if (err) {
                             cb(err)
                         } else {
@@ -123,9 +122,6 @@ export default (o: EastronDevice) => {
                     registers = Models[i].registers;
                 }
             }
-
-            console.log(registers)
-
 
             if (registers && registers.length && registers[0] && (registers[0].reg || registers[0].reg === 0) && registers[0].label) {
                 if (o.dev) {
