@@ -88,17 +88,17 @@ export default (o: EastronDevice) => {
                     } else {
                         const pkg = require("./package.json")
                         answer.apiVersion = pkg.name + ' - ' + pkg.version;
+                        answer.unixTimestamp = new Date().getTime();
 
                         if (o.uid) {
                             answer.uid = o.uid;
                             if (o.className) {
-                                answer._id = o.className + "_" + o.uid;
+                                answer._id = o.className + "_" + o.uid+'_'+answer.unixTimestamp;
                             } else {
-                                answer._id = "data_" + o.uid;
+                                answer._id = "data_" + o.uid+'_'+answer.unixTimestamp;
                             }
                         }
 
-                        answer.unixTimestamp = new Date().getTime();
                         resolve(answer)
                     }
                 })
