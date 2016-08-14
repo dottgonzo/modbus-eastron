@@ -81,6 +81,7 @@ export default (o: EastronDevice) => {
 
                     })
                 }, (err) => {
+                    Client.close();
                     if (err) {
                         reject(err)
                     } else {
