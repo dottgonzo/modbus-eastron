@@ -1,6 +1,6 @@
 {
   "name": "modbus-eastron",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Eastron modbus reader",
   "main": "index.js",
   "scripts": {

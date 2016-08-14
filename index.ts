@@ -34,6 +34,7 @@ interface EastronDevice {
     id: number;
     uid?: string;
     model: string;
+    className?: string;
 }
 
 
@@ -90,7 +91,11 @@ export default (o: EastronDevice) => {
 
                         if (o.uid) {
                             answer.uid = o.uid;
-                            answer._id = "consumption_" + o.uid;
+                            if (o.className) {
+                                answer._id = o.className + "_" + o.uid;
+                            } else {
+                                answer._id = "data_" + o.uid;
+                            }
                         }
 
                         answer.unixTimestamp = new Date().getTime();
