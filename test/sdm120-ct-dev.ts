@@ -27,7 +27,8 @@ interface IEastron120CT {
     active: Ipowa;
     reactive: Ipowa;
     apiVersion: string;
-    unixTimestamp: number;
+    updatedAt: number;
+    direction:string;
 }
 
 
@@ -36,7 +37,7 @@ describe("main test", function () {
 
     it("should return an object", function (done) {
 
-        sdm120ct({ baud: 2400, id: 1, dev: "/dev/ttyUSB0", model: 'SDM120CT' }).then((a: IEastron120CT) => {
+        sdm120ct({ baud: 2400, id: 1, dev: "/dev/ttyUSB0", model: 'SDM120CT', direction: 'consumption' }).then((a: IEastron120CT) => {
 
             expect(a).to.be.an('Object');
             expect(a.active).to.be.an('Object');
@@ -57,7 +58,8 @@ describe("main test", function () {
 
 
             expect(a.apiVersion).to.be.a('string');
-            expect(a.unixTimestamp).to.be.a('number');
+            expect(a.updatedAt).to.be.a('number');
+            expect(a.direction).to.be.a('string');
 
 
             done()

@@ -35,6 +35,7 @@ interface EastronDevice {
     uid?: string;
     model: string;
     className?: string;
+    direction:string;
 }
 
 
@@ -88,14 +89,16 @@ export default (o: EastronDevice) => {
                     } else {
                         const pkg = require("./package.json")
                         answer.apiVersion = pkg.name + ' - ' + pkg.version;
-                        answer.unixTimestamp = new Date().getTime();
+                        answer.updatedAt = new Date().getTime();
+                        answer.model = o.model;
+                        answer.direction = o.direction;
 
                         if (o.uid) {
                             answer.uid = o.uid;
                             if (o.className) {
-                                answer._id = o.className + "_" + o.uid+'_'+answer.unixTimestamp;
+                                answer._id = o.className + "_" + o.uid+'_'+answer.updatedAt;
                             } else {
-                                answer._id = "data_" + o.uid+'_'+answer.unixTimestamp;
+                                answer._id = "data_" + o.uid+'_'+answer.updatedAt;
                             }
                         }
 
